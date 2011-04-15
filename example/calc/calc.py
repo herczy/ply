@@ -8,23 +8,37 @@
 import sys
 sys.path.insert(0,"../..")
 
+import random
+
+import ply.ctokens
+
 if sys.version_info[0] >= 3:
     raw_input = input
 
 tokens = (
-    'NAME','NUMBER',
+    'DICE','NAME','NUMBER','FLOAT',
     )
 
-literals = ['=','+','-','*','/', '(',')']
+literals = ['=','+','-','*','/', '(',')', ',',]
 
 # Tokens
 
 t_NAME    = r'[a-zA-Z_][a-zA-Z0-9_]*'
 
+def t_DICE(t):
+    r'![0-9]+[dD][0-9]+'
+    t.value = map(int, t.value[1:].upper().split('D'))
+    return t
+
 def t_NUMBER(t):
     r'\d+'
-    t.value = int(t.value)
+    t.value = long(t.value)
     return t
+
+def t_FLOAT(t):
+    t.value = float(t.value)
+    return t
+t_FLOAT.__doc__ = ply.ctokens.t_FLOAT
 
 t_ignore = " \t"
 
@@ -77,8 +91,14 @@ def p_expression_group(p):
     "expression : '(' expression ')'"
     p[0] = p[2]
 
+def p_expression_dice(p):
+    "expression : DICE"
+    count, faces = p[1]
+    p[0] = sum(map(lambda p: random.randint(1, faces), xrange(count)))
+
 def p_expression_number(p):
-    "expression : NUMBER"
+    """expression : NUMBER
+                  | FLOAT"""
     p[0] = p[1]
 
 def p_expression_name(p):
