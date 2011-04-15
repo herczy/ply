@@ -119,26 +119,35 @@ def p_error(p):
 import ply.yacc as yacc
 yacc.yacc()
 
-def setup_readline():
-    import atexit, os
-
-    # Setup history
-    histfile = 'calc.hist'
-    os.system('touch %s' % histfile)
-    readline.read_history_file(histfile)
-    atexit.register(readline.write_history_file, histfile)
-
-try:
-    import readline
-    setup_readline()
-
-except ImportError:
-    print 'Cannot import readline'
-
-while 1:
+def interactive():
+    def setup_readline():
+        import atexit, os
+    
+        # Setup history
+        histfile = 'calc.hist'
+        os.system('touch %s' % histfile)
+        readline.read_history_file(histfile)
+        atexit.register(readline.write_history_file, histfile)
+    
     try:
-        s = raw_input('calc > ')
-    except EOFError:
-        break
-    if not s: continue
-    yacc.parse(s)
+        import readline
+        setup_readline()
+    
+    except ImportError:
+        print 'Cannot import readline'
+    
+    while 1:
+        try:
+            s = raw_input('calc > ')
+        except EOFError:
+            break
+        if not s: continue
+        yacc.parse(s)
+
+import sys
+if len(sys.argv) > 1:
+    parse = ' '.join(sys.argv[1:])
+    yacc.parse(parse)
+
+else:
+    interactive()
