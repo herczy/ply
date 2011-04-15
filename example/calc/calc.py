@@ -118,6 +118,22 @@ def p_error(p):
 import ply.yacc as yacc
 yacc.yacc()
 
+def setup_readline():
+    import atexit, os
+
+    # Setup history
+    histfile = 'calc.hist'
+    os.system('touch %s' % histfile)
+    readline.read_history_file(histfile)
+    atexit.register(readline.write_history_file, histfile)
+
+try:
+    import readline
+    setup_readline()
+
+except ImportError:
+    print 'Cannot import readline'
+
 while 1:
     try:
         s = raw_input('calc > ')
