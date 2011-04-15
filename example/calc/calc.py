@@ -16,7 +16,7 @@ if sys.version_info[0] >= 3:
     raw_input = input
 
 tokens = (
-    'DICE','NAME','NUMBER','FLOAT',
+    'NAME','NUMBER','FLOAT',
     )
 
 literals = ['=','+','-','*','/', '(',')', ',',]
@@ -31,8 +31,14 @@ def t_DICE(t):
     return t
 
 def t_NUMBER(t):
-    r'\d+'
-    t.value = long(t.value)
+    r'\d+([dD]\d+)?'
+    if t.value.upper().find('D') != -1:
+        count, faces = map(int, t.value.upper().split('D'))
+        t.value = sum(map(lambda p: random.randint(1, faces), xrange(count)))
+
+    else:
+        t.value = long(t.value)
+
     return t
 
 def t_FLOAT(t):
@@ -90,11 +96,6 @@ def p_expression_uminus(p):
 def p_expression_group(p):
     "expression : '(' expression ')'"
     p[0] = p[2]
-
-def p_expression_dice(p):
-    "expression : DICE"
-    count, faces = p[1]
-    p[0] = sum(map(lambda p: random.randint(1, faces), xrange(count)))
 
 def p_expression_number(p):
     """expression : NUMBER
