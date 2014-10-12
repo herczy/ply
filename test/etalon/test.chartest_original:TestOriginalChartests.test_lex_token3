@@ -1,10 +1,7 @@
 lex_token3.py returned with 1
 
 Traceback (most recent call last):
-  File "/home/herczy/devel/ply/test/lex_token3.py", line 22, in <module>
-    lex.lex()
-  File "/home/herczy/devel/ply/ply/lex.py", line 899, in lex
-    raise SyntaxError("Can't build lexer")
+  ...
 SyntaxError: Can't build lexer
 
 ERROR: Rule 't_MINUS' defined for an unspecified token MINUS

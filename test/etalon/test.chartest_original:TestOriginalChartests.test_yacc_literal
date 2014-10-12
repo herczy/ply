@@ -1,10 +1,7 @@
 yacc_literal.py returned with 1
 
 Traceback (most recent call last):
-  File "/home/herczy/devel/ply/test/yacc_literal.py", line 65, in <module>
-    yacc.yacc()
-  File "/home/herczy/devel/ply/ply/yacc.py", line 3195, in yacc
-    raise YaccError("Unable to build parser")
+  ...
 ply.yacc.YaccError: Unable to build parser
 
 ERROR: /home/herczy/devel/ply/test/yacc_literal.py:36: Literal token '**' in rule 'expression' may only be a single character

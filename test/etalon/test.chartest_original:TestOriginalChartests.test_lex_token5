@@ -1,9 +1,6 @@
 lex_token5.py returned with 1
 
 Traceback (most recent call last):
-  File "/home/herczy/devel/ply/test/lex_token5.py", line 29, in <module>
-    t = lex.token()
-  File "/home/herczy/devel/ply/ply/lex.py", line 361, in token
-    func.__name__, newtok.type),lexdata[lexpos:])
+  ...
 ply.lex.LexError: /home/herczy/devel/ply/test/lex_token5.py:19: Rule 't_NUMBER' returned an unknown token type 'NUM'
 

@@ -1,6 +1,6 @@
-yacc_error6.py returned with 0
-a=7
-Line 3: Syntax error at '*'
-c=21
+yacc_error6.py returned with 1
 
+Traceback (most recent call last):
+  ...
+ImportError: No module named lex
 

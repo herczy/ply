@@ -64,7 +64,7 @@ class PlyCharCase(chartest.Case):
         return re.sub(r'0x[a-fA-F0-9]+', r'', output)
 
     def sanitize_state_indexes(self, output):
-        return re.sub(r'([Ss]tate[:\s]*)\d+', r'\1XXX', output)
+        return re.sub(r'([Ss]tate[:\s]*)\d+', r'\1<statenum>', output)
 
     prefixes = {'WARNING: ', 'ERROR: '}
     def sanitize_errors_and_warnings(self, output):
@@ -94,3 +94,13 @@ class PlyCharCase(chartest.Case):
 
     def sanitize_ignore_LALR_table(self, output):
         return output.replace('Generating LALR tables\n', '')
+
+    def sanitize_exception_filenames(self, output):
+        return re.sub(
+            r'(Traceback \(most recent call last\):)\n' +
+            r'(?:  File "[^"]*", line \d+, in .*\n(?:    .*\n)?)+' +
+            r'([^\s][^\n]+)\n',
+            r'\1\n  ...\n\2\n',
+            output,
+            re.M
+        )

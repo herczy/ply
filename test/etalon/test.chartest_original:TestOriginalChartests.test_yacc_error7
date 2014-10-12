@@ -1,28 +1,6 @@
-yacc_error7.py returned with 0
-a=7
-Line 3: Syntax error at '*'
-c=21
+yacc_error7.py returned with 1
 
-/home/herczy/devel/ply/ply/yacc.py:193: UserWarning: PLY: Don't use global functions errok(), token(), and restart() in p_error().
-Instead, invoke the methods on the associated parser instance:
-
-    def p_error(p):
-        ...
-        # Use parser.errok(), parser.token(), parser.restart()
-        ...
-
-    parser = yacc.yacc()
-
-  warnings.warn(_warnmsg)
-/home/herczy/devel/ply/ply/yacc.py:189: UserWarning: PLY: Don't use global functions errok(), token(), and restart() in p_error().
-Instead, invoke the methods on the associated parser instance:
-
-    def p_error(p):
-        ...
-        # Use parser.errok(), parser.token(), parser.restart()
-        ...
-
-    parser = yacc.yacc()
-
-  warnings.warn(_warnmsg)
+Traceback (most recent call last):
+  ...
+ImportError: No module named lex
 

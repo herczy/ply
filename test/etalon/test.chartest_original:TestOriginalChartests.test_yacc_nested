@@ -5,29 +5,29 @@ A
 
 PLY: PARSE DEBUG START
 
-State  : XXX
+State  : <statenum>
 Stack  : . LexToken(A,'A',1,0)
-Action : Shift and goto state XXX
+Action : Shift and goto state <statenum>
 
-State  : XXX
+State  : <statenum>
 Stack  : A . LexToken(B,'B',1,1)
-Action : Shift and goto state XXX
+Action : Shift and goto state <statenum>
 
-State  : XXX
+State  : <statenum>
 Stack  : A B . LexToken(C,'C',1,2)
-Action : Reduce rule [nest -> B] with ['B'] and goto state XXX
+Action : Reduce rule [nest -> B] with ['B'] and goto state <statenum>
 Result : <NoneType @ > (None)
 
-State  : XXX
+State  : <statenum>
 Stack  : A nest . LexToken(C,'C',1,2)
-Action : Shift and goto state XXX
+Action : Shift and goto state <statenum>
 
-State  : XXX
+State  : <statenum>
 Stack  : A nest C . $end
-Action : Reduce rule [start -> A nest C] with ['A',None,'C'] and goto state XXX
+Action : Reduce rule [start -> A nest C] with ['A',None,'C'] and goto state <statenum>
 Result : <NoneType @ > (None)
 
-State  : XXX
+State  : <statenum>
 Stack  : start . $end
 Done   : Returning <NoneType @ > (None)
 PLY: PARSE DEBUG END

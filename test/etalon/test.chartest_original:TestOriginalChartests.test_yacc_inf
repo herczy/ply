@@ -1,10 +1,7 @@
 yacc_inf.py returned with 1
 
 Traceback (most recent call last):
-  File "/home/herczy/devel/ply/test/yacc_inf.py", line 52, in <module>
-    yacc.yacc()
-  File "/home/herczy/devel/ply/ply/yacc.py", line 3269, in yacc
-    raise YaccError("Unable to build parser")
+  ...
 ply.yacc.YaccError: Unable to build parser
 
 ERROR: Infinite recursion detected for symbol 'expression'
