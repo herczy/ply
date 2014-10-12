@@ -1,0 +1,6 @@
+yacc_rr.py returned with 0
+
+
+WARNING: 1 reduce/reduce conflict
+WARNING: reduce/reduce conflict in state XXX resolved using rule (statement -> NAME EQUALS NUMBER)
+WARNING: rejected rule (expression -> NUMBER) in state XXX

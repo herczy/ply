@@ -1,0 +1,4 @@
+yacc_nodoc.py returned with 0
+
+
+WARNING: /home/herczy/devel/ply/test/yacc_nodoc.py:27: No documentation string specified in function 'p_statement_expr' (ignored)

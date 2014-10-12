@@ -1,0 +1,4 @@
+yacc_nop.py returned with 0
+
+
+WARNING: /home/herczy/devel/ply/test/yacc_nop.py:27: Possible grammar rule 'statement_expr' defined without p_ prefix

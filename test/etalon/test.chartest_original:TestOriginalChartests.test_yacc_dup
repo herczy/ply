@@ -1,0 +1,6 @@
+yacc_dup.py returned with 0
+
+
+WARNING: /home/herczy/devel/ply/test/yacc_dup.py:27: Function p_statement redefined. Previously defined on line 23
+WARNING: There is 1 unused token
+WARNING: Token 'EQUALS' defined, but not used

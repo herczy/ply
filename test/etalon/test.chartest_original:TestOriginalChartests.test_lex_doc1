@@ -1,0 +1,10 @@
+lex_doc1.py returned with 1
+
+Traceback (most recent call last):
+  File "/home/herczy/devel/ply/test/lex_doc1.py", line 24, in <module>
+    lex.lex()
+  File "/home/herczy/devel/ply/ply/lex.py", line 899, in lex
+    raise SyntaxError("Can't build lexer")
+SyntaxError: Can't build lexer
+
+ERROR: /home/herczy/devel/ply/test/lex_doc1.py:18: No regular expression defined for rule 't_NUMBER'

@@ -1,0 +1,10 @@
+yacc_error3.py returned with 1
+
+Traceback (most recent call last):
+  File "/home/herczy/devel/ply/test/yacc_error3.py", line 63, in <module>
+    yacc.yacc()
+  File "/home/herczy/devel/ply/ply/yacc.py", line 3157, in yacc
+    raise YaccError("Unable to build parser")
+ply.yacc.YaccError: Unable to build parser
+
+ERROR: 'p_error' defined, but is not a function or method

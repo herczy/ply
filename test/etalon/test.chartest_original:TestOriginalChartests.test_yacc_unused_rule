@@ -1,0 +1,6 @@
+yacc_unused_rule.py returned with 0
+
+
+WARNING: /home/herczy/devel/ply/test/yacc_unused_rule.py:62: Rule 'integer' defined, but not used
+WARNING: Symbol 'integer' is unreachable
+WARNING: There is 1 unused rule

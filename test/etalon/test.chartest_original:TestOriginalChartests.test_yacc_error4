@@ -1,0 +1,10 @@
+yacc_error4.py returned with 1
+
+Traceback (most recent call last):
+  File "/home/herczy/devel/ply/test/yacc_error4.py", line 68, in <module>
+    yacc.yacc()
+  File "/home/herczy/devel/ply/ply/yacc.py", line 3195, in yacc
+    raise YaccError("Unable to build parser")
+ply.yacc.YaccError: Unable to build parser
+
+ERROR: /home/herczy/devel/ply/test/yacc_error4.py:62: Illegal rule name 'error'. Already defined as a token

@@ -1,0 +1,4 @@
+lex_state_noerror.py returned with 0
+
+
+WARNING: No error rule is defined for exclusive state 'comment'

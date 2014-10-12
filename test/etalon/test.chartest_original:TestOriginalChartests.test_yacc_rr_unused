@@ -1,0 +1,12 @@
+yacc_rr_unused.py returned with 0
+
+
+WARNING: 3 reduce/reduce conflicts
+WARNING: Rule (rule5 -> A) is never reduced
+WARNING: no p_error() function is defined
+WARNING: reduce/reduce conflict in state XXX resolved using rule (rule3 -> A)
+WARNING: reduce/reduce conflict in state XXX resolved using rule (rule3 -> A)
+WARNING: reduce/reduce conflict in state XXX resolved using rule (rule4 -> A)
+WARNING: rejected rule (rule4 -> A) in state XXX
+WARNING: rejected rule (rule5 -> A) in state XXX
+WARNING: rejected rule (rule5 -> A) in state XXX

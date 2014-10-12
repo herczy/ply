@@ -1,0 +1,6 @@
+yacc_notfunc.py returned with 0
+
+
+WARNING: 'p_statement_assign' not defined as a function
+WARNING: There is 1 unused token
+WARNING: Token 'EQUALS' defined, but not used

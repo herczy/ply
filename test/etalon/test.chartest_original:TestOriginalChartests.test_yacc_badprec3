@@ -1,0 +1,4 @@
+yacc_badprec3.py returned with 0
+
+
+WARNING: Precedence already specified for terminal 'MINUS'

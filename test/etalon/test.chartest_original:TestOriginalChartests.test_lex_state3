@@ -1,0 +1,11 @@
+lex_stateXXX.py returned with 1
+
+Traceback (most recent call last):
+  File "/home/herczy/devel/ply/test/lex_stateXXX.py", line 40, in <module>
+    lex.lex()
+  File "/home/herczy/devel/ply/ply/lex.py", line 899, in lex
+    raise SyntaxError("Can't build lexer")
+SyntaxError: Can't build lexer
+
+ERROR: No rules defined for state 'example'
+ERROR: State name 1 must be a string

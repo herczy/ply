@@ -1,0 +1,6 @@
+lex_hedit.py returned with 0
+(H_EDIT_DESCRIPTOR,'abc',1,0)
+(H_EDIT_DESCRIPTOR,'abcdefghij',1,6)
+(H_EDIT_DESCRIPTOR,'xy',1,20)
+
+
