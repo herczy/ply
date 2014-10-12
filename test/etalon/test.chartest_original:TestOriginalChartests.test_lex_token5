@@ -2,5 +2,5 @@ lex_token5.py returned with 1
 
 Traceback (most recent call last):
   ...
-ply.lex.LexError: /home/herczy/devel/ply/test/lex_token5.py:19: Rule 't_NUMBER' returned an unknown token type 'NUM'
+ply.lex.error.LexError: /home/herczy/devel/ply/test/lex_token5.py:19: Rule 't_NUMBER' returned an unknown token type 'NUM'
 

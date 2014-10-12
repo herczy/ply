@@ -60,10 +60,7 @@ _is_identifier = re.compile(r'^[a-zA-Z0-9_]+$')
 # Exception thrown when invalid token encountered and no default error
 # handler is defined.
 
-class LexError(Exception):
-    def __init__(self,message,s):
-         self.args = (message,)
-         self.text = s
+from .error import LexError
 
 # Token class.  This class is used to represent the tokens produced.
 class LexToken(object):
