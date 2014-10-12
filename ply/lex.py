@@ -47,7 +47,7 @@ except AttributeError:
 # Extract the code attribute of a function. Different implementations
 # are for Python 2/3 compatibility.
 
-if sys.version_info[0] < 3:
+if sys.version_info.major < 3:
     def func_code(f):
         return f.func_code
 else:
@@ -215,7 +215,7 @@ class Lexer:
         if isinstance(tabfile,types.ModuleType):
             lextab = tabfile
         else:
-            if sys.version_info[0] < 3:
+            if sys.version_info.major < 3:
                 exec("import %s as lextab" % tabfile)
             else:
                 env = { }
@@ -716,7 +716,7 @@ class LexerReflect(object):
 
         # Sort the functions by line number
         for f in self.funcsym.values():
-            if sys.version_info[0] < 3:
+            if sys.version_info.major < 3:
                 f.sort(lambda x,y: cmp(func_code(x[1]).co_firstlineno,func_code(y[1]).co_firstlineno))
             else:
                 # Python 3.0
@@ -724,7 +724,7 @@ class LexerReflect(object):
 
         # Sort the strings by regular expression length
         for s in self.strsym.values():
-            if sys.version_info[0] < 3:
+            if sys.version_info.major < 3:
                 s.sort(lambda x,y: (len(x[1]) < len(y[1])) - (len(x[1]) > len(y[1])))
             else:
                 # Python 3.0
