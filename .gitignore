@@ -7,3 +7,8 @@ __pycache__
 /dist
 /build
 /*.egg-info
+aliastab.py
+lextab.py
+manytab.py
+opt2tab.py
+parsetab.py
