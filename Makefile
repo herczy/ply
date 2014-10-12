@@ -5,7 +5,11 @@ ETALON = test/etalon
 CHARPATH = test
 
 .PHONY:
-all: characterization-tests sdist bdist_egg
+all: unit-tests characterization-tests sdist bdist_egg
+
+.PHONY:
+unit-tests:
+	$(NOSE)
 
 .PHONY: characterization-tests
 characterization-tests:
